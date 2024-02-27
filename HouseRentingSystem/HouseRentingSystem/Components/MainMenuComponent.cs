@@ -1,10 +1,13 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
+
 namespace HouseRentingSystem.Components
 {
-	public class MainMenuComponent
+	public class MainMenuComponent : ViewComponent
 	{
-		public MainMenuComponent()
+		public async Task<IViewComponentResult> InvokeAsync()
 		{
+			return await Task.FromResult<IViewComponentResult>(View());
 		}
 	}
 }
