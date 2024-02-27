@@ -1,28 +1,31 @@
 ﻿<Properties StartupConfiguration="{0F3569B4-715E-4261-9988-1B59542EEE9A}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.HouseRentingSystem FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HouseRentingSystem/Extensions/ServiceCollectionExtension.cs">
+  <MonoDevelop.Ide.ItemProperties.HouseRentingSystem.Core FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HouseRentingSystem/Program.cs">
     <Files>
-      <File FileName="HouseRentingSystem/Program.cs" />
-      <File FileName="HouseRentingSystem/Extensions/ServiceCollectionExtension.cs" Line="15" Column="27" />
+      <File FileName="HouseRentingSystem/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="HouseRentingSystem">
-            <Node name="HouseRentingSystem">
-              <Node name="Extensions" expanded="True">
-                <Node name="ServiceCollectionExtension.cs" selected="True" />
+          <Node name="HouseRentingSystem" expanded="True">
+            <Node name="HouseRentingSystem" expanded="True">
+              <Node name="Components" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Extensions" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
               </Node>
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.HouseRentingSystem PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.HouseRentingSystem.Infrastructure FirstBuild="True" />
+  <MultiItemStartupConfigurations />
 </Properties>
