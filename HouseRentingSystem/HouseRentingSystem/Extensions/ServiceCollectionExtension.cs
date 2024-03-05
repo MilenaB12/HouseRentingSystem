@@ -14,7 +14,7 @@ namespace HouseRentingSystem.Extensions
         public static IServiceCollection AddAplicationDbContext(this IServiceCollection services, IConfiguration config)
         {
             var connectionString = config.GetConnectionString("DefaultConnection");
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<HouseDbContext>(options =>
                 options.UseSqlite(connectionString));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
@@ -26,7 +26,7 @@ namespace HouseRentingSystem.Extensions
         public static IServiceCollection AddAplicationIdentity(this IServiceCollection services, IConfiguration config)
         {
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<HouseDbContext>();
 
             return services;
         }

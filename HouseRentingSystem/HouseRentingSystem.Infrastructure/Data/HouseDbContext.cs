@@ -1,12 +1,13 @@
 ﻿using HouseRentingSystem.Infrastructure.Data.Models;
+using HouseRentingSystem.Infrastructure.Data.SeedDb;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace HouseRentingSystem.Ifrastructure.Data;
 
-public class ApplicationDbContext : IdentityDbContext
+public class HouseDbContext : IdentityDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public HouseDbContext(DbContextOptions<HouseDbContext> options)
         : base(options)
     {
 
@@ -14,17 +15,10 @@ public class ApplicationDbContext : IdentityDbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<House>()
-            .HasOne(h => h.Category)
-            .WithMany(c => c.Houses)
-            .HasForeignKey(h => h.CategoryId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.Entity<House>()
-        .HasOne(h => h.Agent)
-        .WithMany(c => c.Houses)
-        .HasForeignKey(h => h.AgentId)
-        .OnDelete(DeleteBehavior.Restrict);
+        builder.ApplyConfiguration(new UserConfiguration());
+        builder.ApplyConfiguration(new AgentConfiguration());
+        builder.ApplyConfiguration(new CategoryConfiguration());
+        builder.ApplyConfiguration(new HouseConfiguration());
 
         base.OnModelCreating(builder);
     }
