@@ -25,8 +25,15 @@ namespace HouseRentingSystem.Extensions
 
         public static IServiceCollection AddAplicationIdentity(this IServiceCollection services, IConfiguration config)
         {
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<HouseDbContext>();
+            services.AddDefaultIdentity<IdentityUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireUppercase = false;
+            })
+            .AddEntityFrameworkStores<HouseDbContext>();
 
             return services;
         }
