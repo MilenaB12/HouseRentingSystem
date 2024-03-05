@@ -1,11 +1,10 @@
-﻿using System;
-using HouseRentingSystem.Data;
+﻿using HouseRentingSystem.Ifrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace HouseRentingSystem.Extensions
 {
-	public static class ServiceCollectionExtension
+    public static class ServiceCollectionExtension
 	{
         public static IServiceCollection AddAplicationServices(this IServiceCollection services)
         {
